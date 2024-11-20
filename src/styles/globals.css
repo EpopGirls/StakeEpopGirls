@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+}
+
+button,
+a,
+.custom-button {
+    cursor: pointer;
+    /* Cambia el cursor a puntero */
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ancho de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #b100b4;
+    /* Fondo de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f70195;
+    /* Color del pulgar de la scrollbar */
+    border-radius: 10px;
+    /* Radio de borde del pulgar */
+    border: 2px solid transparent;
+    /* Borde transparente para mantener el tamaño del pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f70195;
+    /* Color del pulgar al pasar el mouse (puedes ajustarlo si deseas) */
+}
+
+input[type=number] {
+    -webkit-appearance: textfield;
+    /* For Chrome, Safari, and Edge */
+    -moz-appearance: textfield;
+    /* For Firefox */
+    appearance: textfield;
+    /* Standard property */
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* Remove spin buttons in WebKit browsers */
+    margin: 0;
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: thin;
+    /* Grosor de la scrollbar */
+    scrollbar-color: #f70195 rgb(0, 0, 0);
+    /* Color del pulgar y fondo de la scrollbar */
+}

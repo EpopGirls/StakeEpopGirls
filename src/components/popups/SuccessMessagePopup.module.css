@@ -1,0 +1,41 @@
+.errorNotice {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    width: 1200px;
+    transform: translate(-50%, 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(17, 15, 16, 0.8);
+    border: 1px solid #3d002a;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+  
+.errorNotice p {
+    margin: 0 0 10px 0; /* Añade margen inferior para separar el texto del botón */
+}
+
+.closeButton {
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: transparent !important;
+    backdrop-filter: blur(5px);
+    border: 1px solid #3d002a;
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Margen inferior de 10px entre los botones */
+}
+  
+.closeButton:hover {
+    color: #ed1e79; /* Cambiar el color de la letra a blanco */
+    text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+    text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+    cursor: pointer;
+    border: 1px solid #ed1e79;
+}

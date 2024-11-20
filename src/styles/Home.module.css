@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.noGapBottom {
+  margin-bottom: 0px;
+}
+
+.container {
+  width: auto;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0 2rem;
+  font-family: 'Dancing Script';
+}
+
+.containerFlex {
+  display: flex;
+  flex-direction: row; /* Disposición horizontal en pantallas grandes */
+  justify-content: space-between; /* Espacio entre los elementos */
+  border-radius: 10px;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #901b93;
+}
+
+.containerFlex > div {
+  flex: 1; /* Cada hijo del contenedor ocupará un espacio igual */
+  margin: 10px; /* Espacio alrededor de cada hijo */
+}
+
+.containerFlex2 {
+  display: flex;
+  flex-direction: row; /* Disposición horizontal en pantallas grandes */
+  justify-content: space-between; /* Espacio entre los elementos */
+  border-radius: 10px;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #901b93;
+}
+
+.containerFlex2 > div {
+  flex: 1; /* Cada hijo del contenedor ocupará un espacio igual */
+  margin: 10px; /* Espacio alrededor de cada hijo */
+}
+
+.containerFlexWBG {
+  display: flex;
+  flex-direction: row; /* Disposición horizontal en pantallas grandes */
+  justify-content: space-between; /* Espacio entre los elementos */
+  border-radius: 10px;
+  background-color: transparent !important;
+}
+
+.containerFlexWBG > div {
+  flex: 1; /* Cada hijo del contenedor ocupará un espacio igual */
+  margin: 10px; /* Espacio alrededor de cada hijo */
+}
+
+.containerNFT {
+  flex-direction: row; /* Disposición horizontal en pantallas grandes */
+  justify-content: space-between; /* Espacio entre los elementos */
+  border-radius: 10px;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #901b93;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftContent {
+  flex: 1;
+  margin-right: 20px; /* Espacio entre el iframe y el contenido derecho */
+}
+
+.rightContent {
+  flex: 1;
+}
+
+.footer {
+  width: auto;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: -50px;
+  padding: 10px 2rem;
+  font-family: "Dancing Script";
+  background-color: #59005B;
+}
+
+.mintPhases {
+  width: auto;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0 2rem;
+  font-family: "Dancing Script";
+  border-radius: 10px;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #901b93;
+}
+
+.mintPhasesMob {
+  width: auto;
+  height: 250px;
+  margin: 0 0;
+  justify-content: center;
+  padding: 0 2rem;
+  font-family: "Dancing Script";
+  border-radius: 10px;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  margin-bottom: -80px;
+  box-shadow: 0 0 10px #901b93;
+}
+
+.ecosystemBox {
+  flex-basis: calc(25% - 5px); /* El 10px es el espacio entre las columnas */
+  margin-bottom: 20px; /* Espacio entre las filas */
+  background-color: rgba(89, 0, 91, 0.5); /* Color semi-transparente */
+  border-radius: 15px;
+  max-width: auto;
+  height: 80px;
+  overflow: hidden;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+
+.ecosystemBox2 {
+  flex-basis: calc(25% - 5px); /* El 10px es el espacio entre las columnas */
+  margin-bottom: 20px; /* Espacio entre las filas */
+  border-radius: 15px;
+  max-width: auto;
+  height: 300px;
+  overflow: hidden;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 2rem;
+  border: 1px solid #3d002a;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #901b93;
+}
+
+.textEcosystem2 {
+  text-align: center;
+  margin-top: -30px;
+  flex-direction: column;
+}
+
+.partnerContainer {
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0 2rem;
+  font-family: 'Silkscreen', sans-serif;
+  background-color: #59005B;
+  border-radius: 15px;
+}
+
+.containerStake {
+  width: 90vw;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0 5rem;
+  font-family: 'Silkscreen', sans-serif;
+  margin-left: 50px;
+}
+
+.containerICO {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.nftGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nftBox {
+  flex-basis: calc(25% - 5px); /* El 10px es el espacio entre las columnas */
+  margin-bottom: 20px; /* Espacio entre las filas */
+  
+}
+
+.nftMedia {
+  border-radius: 10px; 
+  margin-top: 25px; 
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid #59005B;
+  margin-bottom: 2rem;
+}
+
+.tokenMedia {
+  border-radius: 20px; 
+  margin-bottom: 15px;
+  width: 270px;
+  height: 140px;
+  align-items: center;
+  background-color: #59005B;
+  padding: 0 2rem;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.tokenMedia2 {
+  border-radius: 15px; 
+  margin-bottom: 15px;
+  width: 250px;
+  height: 60px;
+  align-items: center;
+  border: 4px solid #59005B;
+  background-color: rgba(89, 0, 91, 0.5);
+  font-family: 'Silkscreen', sans-serif;
+}
+
+
+.leftImage {
+  order: 1;
+  width: 291px;
+  height: 492px;
+  margin-bottom: 30px;
+}
+
+.rightImage {
+  order: 2;
+  width: 800px;
+  height: 492px;
+  margin-bottom: 30px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageContainer2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageContainerSteps {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente, si es necesario */
+  width: 100%;
+}
+
+.centeredImage {
+  width: 250px;
+}
+
+.gridCI {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las imágenes pequeñas */
+  margin-top: 20px;
+}
+
+.smallImage {
+  width: 200px; /* Tamaño de las imágenes pequeñas */
+  height: 200px; /* Tamaño de las imágenes pequeñas */
+  border-radius: 15px; /* Borde redondeado */
+  margin-bottom: 20px;
+}
+
+.smallImage2 {
+  width: 200px; /* Tamaño de las imágenes pequeñas */
+  height: 50px; /* Tamaño de las imágenes pequeñas */
+  margin-bottom: 20px;
+}
+
+.updatesImage {
+  width: 550px; /* Tamaño de las imágenes pequeñas */
+  border-radius: 10px;
+}
+
+.updatesContainer {
+  width: 600px;
+  height: 420px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2rem 2rem;
+  font-family: 'Silkscreen', sans-serif;
+  background-color: #59005B;
+  border-radius: 15px;
+}
+
+.updateColumn {
+  display: flex;
+  flex-direction: column; /* Esto coloca los elementos en una columna */
+  align-items: center; /* Esto centra los elementos verticalmente */
+}
+
+.updateContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; /* Esto coloca los elementos en una columna */
+  align-items: center; /* Esto centra los elementos verticalmente */
+}
+
+.mainImage {
+  width: 100%; /* Tamaño de las imágenes pequeñas */
+  margin-top: 40px;
+  margin-bottom: -80px;
+  border: 4px solid #59005B;
+  border-radius: 15px;
+}
+
+.mainImageF {
+  width: 75%; /* Tamaño de las imágenes pequeñas */
+  margin-top: 35px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.mainImageF2 {
+  width: 100%; /* Tamaño de las imágenes pequeñas */
+  margin-top: 35px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.mainImageF3 {
+  width: 50%; /* Tamaño de las imágenes pequeñas */
+  margin-top: 35px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between; /* Esto distribuye el espacio uniformemente entre los elementos */
+  align-items: center; /* Esto alinea las imágenes verticalmente */
+}
+
+.pfImage, .pfImage2 {
+  width: 33%;
+  margin-bottom: -300px;
+}
+
+.mainImage2 {
+  width: 532px; /* Tamaño de las imágenes pequeñas */
+  height: 364px; /* Tamaño de las imágenes pequeñas */
+  margin-top: 50px;
+  margin-bottom: -80px;
+}
+
+.mainImageSwap {
+  width: 310px; /* Tamaño de las imágenes pequeñas */
+  height: 150px; /* Tamaño de las imágenes pequeñas */
+  margin-top: 50px;
+  margin-bottom: -80px;
+}
+
+.mainImageSwap2 {
+  width: 310px; /* Tamaño de las imágenes pequeñas */
+  height: 150px; /* Tamaño de las imágenes pequeñas */
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.mainImageSwap3 {
+  width: 310px; /* Tamaño de las imágenes pequeñas */
+  height: 150px; /* Tamaño de las imágenes pequeñas */
+  margin-bottom: 10px;
+}
+
+.twitterImg {
+  width: 64px; /* Tamaño de las imágenes pequeñas */
+  height: 64px; /* Tamaño de las imágenes pequeñas */
+}
+
+.twitterImgNav {
+  width: 52px; /* Tamaño de las imágenes pequeñas */
+  height: 52px; /* Tamaño de las imágenes pequeñas */
+  border-radius: 50%; /* Asegurarse de que el elemento tenga bordes redondeados */
+}
+
+.twitterImgNav:hover {
+  border-color: #ed1e79; /* Cambiar el color de la letra */
+  box-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+}
+
+.SwapImg {
+  width: 160px; /* Tamaño de las imágenes pequeñas */
+  height: 80px; /* Tamaño de las imágenes pequeñas */
+  margin-bottom: 15px;
+}
+
+.progressBarContainer {
+  width: 450px;
+  height: 20px;
+  background-color: #59005B;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 1px solid #59005B;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 5px;
+  background-color: yellow; /* Color verde para la barra de progreso */
+}
+
+.claimGrid {
+  display: auto;
+  flex-direction: column;
+  height: 25px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 5%;
+}
+
+.textInput {
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid #3d002a;
+  color: white;
+  font-size: 15px;
+  margin-top: -20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 25px;
+}
+
+.connectWallet {
+  border-radius: 10px;
+  background-color: transparent !important;
+  border: 1px solid #3d002a;
+  color: white;
+  margin-top: -20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Dancing Script', sans-serif;
+}
+
+.connectWallet:hover {
+  color: #ed1e79; /* Cambiar el color de la letra */
+  text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+  border: 1px solid #ed1e79;
+
+}
+
+.welcomeText {
+  color: #ed1e79; /* Cambiar el color de la letra */
+  text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+}
+
+.content {
+  text-align: center;
+}
+
+.raffleAppImg {
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin: auto;
+}
+
+.containerFoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkFoot {
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.linkFoot:hover {
+  color: #ed1e79; /* Cambiar el color de la letra a blanco */
+  text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+  cursor: pointer;
+}
+
+.spaceFoot {
+  margin: 0 10px; /* Ajusta el espacio entre los enlaces según lo necesites */
+}
+
+.grid {
+  display: flex;
+  justify-content: center; /* Aligns items horizontally to the center */
+  align-items: flex-start; /* Aligns items vertically to the start */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nftCard {
+  background-color: #59005B;
+  border-radius: 10px;
+  max-width: 440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center; /* Alinea los botones en el centro horizontalmente */
+  margin-bottom: 20px;
+}
+
+.buttonMint {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid #3d002a;
+  color: white;
+  font-size: 15px;
+  margin-top: -20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 25px;
+}
+
+.buttonMint:hover {
+  color: #ed1e79; /* Cambiar el color de la letra a blanco */
+  text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+  cursor: pointer;
+  border: 1px solid #ed1e79;
+}
+
+.buttonGeneral {
+  width: 250px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: transparent !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid #3d002a;
+  color: white;
+  font-size: 18px;
+  margin-top: -20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: 'Dancing Script', sans-serif;
+  margin-bottom: 25px; /* Margen inferior de 10px entre los botones */
+}
+
+.buttonGeneral:hover {
+  color: #ed1e79; /* Cambiar el color de la letra a blanco */
+  text-shadow: 0 0 10px #901b93; /* Añadir una sombra al texto con el color #901b93 */
+  text-decoration: none; /* Eliminar la subrayado del enlace al pasar el mouse */
+  cursor: pointer;
+  border: 1px solid #ed1e79;
+}
+
+
+.mobileOnly {
+  display: none; /* Oculta el contenido en teléfonos */
+}
+
+.socialContainer {
+  margin-top: 150px;
+}
+
+.imageContainerR {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centrará los elementos horizontalmente */
+  text-align: center; /* Esto centrará el texto del título */
+}
+
+.imgPC {
+  width: 20%;
+  height: 20%;
+  display: flexbox;
+  margin-left: 500px;
+  margin-top: -500px;
+}
+
+.imgPC2 {
+  position: fixed; /* o absolute dependiendo de tus necesidades */
+  top: 295px; /* Puedes cambiar esto para posicionarlo como necesites */
+  left: 700px; /* Puedes cambiar esto para posicionarlo como necesites */
+  z-index: 9999; /* Asegúrate de que esté delante de todo */
+  pointer-events: none;
+  width: 30px;
+}
+
+/* On mobile: */
+@media only screen and (max-width: 479px) {
+  .container,
+  .footer,
+  .mintPhases,
+  .containerStake,
+  .containerFlex,
+  .containerFlex2,
+  .containerFlexWBG,
+  .containerICO {
+    padding: 0.02rem;
+    font-family: 'Dancing Script';
+  }
+
+  .mintPhasesMob {
+    padding: 0.5rem;
+  }
+
+  .containerFlex {
+    flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+  }
+
+  .containerFlexWBG {
+    flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+  }
+
+  .containerFlex2 {
+    flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+  }
+
+  .updatesImage {
+    width: 225px;
+  }
+
+  .updatesContainer {
+    flex-basis: calc(40% - 10px);
+    width: 300px;
+    height: 250px;
+  }
+
+  .nftBox {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .textInput,
+  .textInput2 {
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+
+  .progressBarContainer {
+    padding: auto;
+  }
+
+  .rightImage {
+    display: none;
+  }
+
+  .leftImage {
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileOnly {
+    display: block; /* Mostrar en dispositivos móviles */
+    margin-bottom: 80px;
+  }
+
+  .mainImage2 {
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contentWrapper {
+    justify-content: center; /* Aligns items horizontally to the center */
+    align-items: center; /* Aligns items vertically to the center */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .leftContent {
+    flex: 1;
+    margin-right: 0px; /* Espacio entre el iframe y el contenido derecho */
+  }
+  
+  .rightContent {
+    flex: 1;
+  }
+
+  .grid {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally to the center */
+    align-items: center; /* Aligns items vertically to the center */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .raffleAppImg {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  .twitterImg {
+    width: 52px; /* Tamaño de las imágenes pequeñas */
+    height: 52px; /* Tamaño de las imágenes pequeñas */
+  }
+
+  .nftCard {
+    border-radius: 10px;
+    max-width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    margin-left: 0;
+  }
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    margin-right: 0;
+  }
+
+  .pcOnly {
+    display: none; /* Oculta el contenido en PC */
+  }
+
+  .socialContainer {
+    margin-top: 220px;
+  }
+  
+}
