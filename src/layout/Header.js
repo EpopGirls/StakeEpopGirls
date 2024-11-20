@@ -26,16 +26,10 @@ const Header = () => {
         <div className="nav_content">
           <div className="nav_menu">
             <ul>
-              <li className="menu-item menu-item-has-children">
-                <a
-                  href="https://epopgirls.xyz/"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setHomeToggle(!homeToggle);
-                  }}
-                >
+              <li className="menu-item">
+                <Link legacyBehavior href="https://epopgirls.xyz/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="menu-item">
                 <Link legacyBehavior href="https://epopgirls.xyz/#about">
