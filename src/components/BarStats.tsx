@@ -53,11 +53,11 @@ const Stats: NextPage = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "50px",
+                gap: "100px",
             }}
         >
             <div>
-                <p style={{ fontSize: "20px", marginBottom: "10px", textAlign: "center" }}>Balance<img src="/favicon.ico" alt="$EPOP" style={{ width: "20px", height: "20px", margin: "-4px 5px" }} /></p>
+                <p style={{ fontSize: "20px", marginBottom: "10px", textAlign: "center" }}>Balance</p>
                 <p style={{ textAlign: "center" }}>
                     <b>
                         {isLoadingTokenBalance
@@ -67,7 +67,7 @@ const Stats: NextPage = () => {
                 </p>
             </div>
             <div>
-                <p style={{ fontSize: "20px", marginBottom: "10px", textAlign: "center" }}>Rewards<img src="/favicon.ico" alt="$EPOP" style={{ width: "20px", height: "20px", margin: "-4px 5px" }} /></p>
+                <p style={{ fontSize: "20px", marginBottom: "10px", textAlign: "center" }}>Rewards</p>
                 <p style={{ textAlign: "center" }}>
                     <b>
                         {!claimableRewards
