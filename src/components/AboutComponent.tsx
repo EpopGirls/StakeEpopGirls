@@ -154,11 +154,11 @@ const AboutComponent = () => {
         {/* About Item #1 */}
         <div className="neoh_fn_about_item">
           <div className="img_item">
-            <img src="img/about/2.png" alt="" />
+            <img src="img/about/epop-bunny.png" alt="" />
           </div>
           <div className="content_item">
             <div className="neoh_fn_title" data-align="left">
-              <h3 className="fn_title">Staking Tools</h3>
+              <h3 className="fn_title">Staking Dashboard</h3>
               <div className="line">
                 <span />
               </div>
@@ -270,6 +270,45 @@ const AboutComponent = () => {
                           secondaryButtonBg: "#3d002a",
                         },
                       })}
+                      action={(contract) => contract.erc721.claim(1)}
+                      contractAddress="0x6a91E0E4a6236008B778Ced5C9356C05f6c61e3c"
+                      onSuccess={() => {
+                        setSuccessMessage('Epop Minted');
+                      }}
+                      onError={() => {
+                        setErrorMessage('Error: Transaction rejected or insufficient funds.');
+                      }}
+
+                      style={{ border: "2px solid #f70195", height: "50px" }}
+                    >
+                      Mint NFT
+                    </Web3Button>
+
+                    <Web3Button
+                      connectWallet={{
+                        btnTitle: "Connect Wallet",
+                        modalTitle: "Epop Girls",
+                        modalSize: "compact",
+                        modalTitleIconUrl: "/favicon.ico",
+                        showThirdwebBranding: false,
+                      }}
+                      theme={lightTheme({
+                        colors: {
+                          modalBg: "#26001c",
+                          borderColor: "transparent",
+                          separatorLine: "#3d002a",
+                          secondaryText: "#c4c4c4",
+                          primaryText: "#ffffff",
+                          connectedButtonBg: "transparent",
+                          primaryButtonBg: "transparent",
+                          primaryButtonText: "#ffffff",
+                          secondaryButtonHoverBg: "#3d002a",
+                          connectedButtonBgHover: "transparent",
+                          walletSelectorButtonHoverBg: "#3d002a",
+                          secondaryButtonText: "#ffffff",
+                          secondaryButtonBg: "#3d002a",
+                        },
+                      })}
                       action={() => stakeAllNfts()}
                       contractAddress={stakingContractAddress}
                       onSuccess={() => {
@@ -318,45 +357,6 @@ const AboutComponent = () => {
                       style={{ border: "2px solid #f70195", height: "50px" }}
                     >
                       Unstake NFTs
-                    </Web3Button>
-
-                    <Web3Button
-                      connectWallet={{
-                        btnTitle: "Connect Wallet",
-                        modalTitle: "Epop Girls",
-                        modalSize: "compact",
-                        modalTitleIconUrl: "/favicon.ico",
-                        showThirdwebBranding: false,
-                      }}
-                      theme={lightTheme({
-                        colors: {
-                          modalBg: "#26001c",
-                          borderColor: "transparent",
-                          separatorLine: "#3d002a",
-                          secondaryText: "#c4c4c4",
-                          primaryText: "#ffffff",
-                          connectedButtonBg: "transparent",
-                          primaryButtonBg: "transparent",
-                          primaryButtonText: "#ffffff",
-                          secondaryButtonHoverBg: "#3d002a",
-                          connectedButtonBgHover: "transparent",
-                          walletSelectorButtonHoverBg: "#3d002a",
-                          secondaryButtonText: "#ffffff",
-                          secondaryButtonBg: "#3d002a",
-                        },
-                      })}
-                      action={(contract) => contract.erc721.claim(1)}
-                      contractAddress="0x6a91E0E4a6236008B778Ced5C9356C05f6c61e3c"
-                      onSuccess={() => {
-                        setSuccessMessage('Epop Minted');
-                      }}
-                      onError={() => {
-                        setErrorMessage('Error: Transaction rejected or insufficient funds.');
-                      }}
-
-                      style={{ border: "2px solid #f70195", height: "50px" }}
-                    >
-                      Mint NFT
                     </Web3Button>
                   </div>
 
