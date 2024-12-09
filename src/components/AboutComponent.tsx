@@ -159,6 +159,7 @@ const AboutComponent = () => {
           <div className="content_item">
             <div className="neoh_fn_title" data-align="left">
               <h3 className="fn_title">Staking Dashboard</h3>
+              <p>$EPOP Staking Rewards<img src="/favicon.ico" alt="$EPOP" style={{ width: "25px", height: "25px", margin: "-4px 5px" }} /></p>
               <div className="line">
                 <span />
               </div>
@@ -360,11 +361,24 @@ const AboutComponent = () => {
                     </Web3Button>
                   </div>
 
-                  {successMessage && <p style={{ color: "green", marginTop: "20px" }}>{successMessage}</p>}
-                  {errorMessage && <p style={{ color: "red", marginTop: "20px" }}>{errorMessage}</p>}
+                  {successMessage && <SuccessMessagePopup message={successMessage} onClose={() => setSuccessMessage('')} />}
+                  {errorMessage && <ErrorMessagePopup message={errorMessage} onClose={() => setErrorMessage('')} />}
                 </div>
               </>
             )}
+            <div style={{ marginTop: "100px" }} className="neoh_fn_title" data-align="left">
+              <div className="line">
+                <span />
+              </div>
+              <p style={{ marginTop: "30px" }}>Learn About Staking Rewards</p>
+              <div className="buttons">
+                <Link legacyBehavior href="https://info.epopgirls.xyz" target="blank">
+                  <a className="neoh_fn_button only_text">
+                    <span className="text">White Paper</span>
+                  </a>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         {/* !About Item #1 */}
