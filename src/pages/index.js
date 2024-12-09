@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Layout from "@/layout/Layout";
 import AboutComponent from "@components/AboutComponent";
 import Drops from "@components/Drops";
@@ -5,6 +6,17 @@ import ServicesComponent from "@components/ServicesComponent";
 import WhyChooseUsComponent from "@components/WhyChooseUsComponent";
 
 const Index = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Cambiar según el breakpoint deseado
+    };
+    handleResize(); // Ejecutar al montar
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Layout pageName={"Home Static"}>
       {/* Hero Header */}
@@ -14,13 +26,22 @@ const Index = () => {
           {/* Overlay Color */}
           <div className="bg_color" />
           {/* !Overlay Color */}
+          <div className="bg_image" data-bg-img="/img/hero/bg2.png" />
+          {/* !Overlay Image */}
         </div>
         {/* Overlay (of hero header) */}
         <div className="hero_content">
           <div className="container">
             <div className="content">
               <span>
-                <img src="/img/main-banner.png" alt="" />
+                <img
+                  src="/img/stake-logo.png"
+                  alt=""
+                  style={{
+                    width: isMobile ? "100%" : "50%", // 100% en móvil, 50% en PC
+                    maxWidth: "100%",
+                  }}
+                />
               </span>
             </div>
           </div>
@@ -48,4 +69,5 @@ const Index = () => {
     </Layout>
   );
 };
+
 export default Index;
