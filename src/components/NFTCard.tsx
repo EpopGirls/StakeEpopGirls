@@ -27,85 +27,92 @@ const NFTCard: React.FC<NFTCardProps> = ({ tokenId }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
+  const [isLoading, setIsLoading] = useState(true);
 
   const address = useAddress();
   const { contract } = useContract(nftDropContractAddress, "nft-drop");
   const { data: nft } = useNFT(contract, tokenId);
   const { contract: stakingContact } = useContract(stakingContractAddress);
-
   const { contract: tokenContract } = useContract(tokenContractAddress, "token");
   const { data: tokenBalance } = useTokenBalance(tokenContract, address);
-  
+
   useEffect(() => {
     if (!stakingContact || !address) return;
 
     async function loadClaimableRewards() {
-      const stakeInfo = await stakingContact?.call("getRewardsPerUnitTime");
-      setClaimableRewards(stakeInfo);
-    }    
+      try {
+        const stakeInfo = await stakingContact.call("getRewardsPerUnitTime");
+        setClaimableRewards(stakeInfo);
+      } catch (err) {
+        console.error("Error loading rewards:", err);
+      }
+    }
 
     loadClaimableRewards();
-
     const intervalId = setInterval(loadClaimableRewards, 1000);
-
     return () => clearInterval(intervalId);
   }, [stakingContact, address]);
 
+  useEffect(() => {
+    if (nft && nft.metadata && nft.metadata.name) {
+      setIsLoading(false);
+    }
+  }, [nft]);
+
   const truncateRevenue = (revenue: BigNumber) => {
     const convertToEther = toEther(revenue);
-    const truncateValue = convertToEther.toString().slice(0, 6);
-    return truncateValue;
+    return convertToEther.toString().slice(0, 6);
   };
 
   useEffect(() => {
     if (errorMessage) {
-      const timer = setTimeout(() => {
-        setErrorMessage('');
-      }, 4000); // Cierra el mensaje de error después de 4 segundos
-    
-      return () => clearTimeout(timer); // Limpia el temporizador cuando el componente se desmonta o cuando el mensaje de error cambia
+      const timer = setTimeout(() => setErrorMessage(''), 4000);
+      return () => clearTimeout(timer);
     }
   }, [errorMessage]);
 
   useEffect(() => {
     if (successMessage) {
-      const timer = setTimeout(() => {
-        setSuccessMessage('');
-      }, 4000); // Cierra el mensaje de éxito después de 4 segundos
-    
-      return () => clearTimeout(timer); // Limpia el temporizador cuando el componente se desmonta o cuando el mensaje de éxito cambia
+      const timer = setTimeout(() => setSuccessMessage(''), 4000);
+      return () => clearTimeout(timer);
     }
   }, [successMessage]);
 
-
   const handleConnectWallet = async () => {
     try {
-      // Tu lógica para conectar la billetera
-      // Supongamos que aquí tienes una operación exitosa
       setSuccessMessage('Goblin Minted');
     } catch (error) {
-      // Si ocurre un error
       setErrorMessage('Error: Transaction rejected or insufficient funds.');
-      setSuccessMessage(''); // Asegúrate de borrar cualquier mensaje de éxito anterior
+      setSuccessMessage('');
     }
   };
 
   return (
     <>
-      {nft && (
+      {isLoading ? (
         <div className={styles.nftBox}>
-          {nft.metadata && (
-            <ThirdwebNftMedia
-              metadata={nft.metadata}
-              className={styles.nftMedia}
-            />
-          )}
+          <p style={{ textAlign: "center" }}>Loading metadata...</p>
+        </div>
+      ) : nft && nft.metadata ? (
+        <div className={styles.nftBox}>
+          <ThirdwebNftMedia
+            metadata={nft.metadata}
+            className={styles.nftMedia}
+          />
           <p style={{ textAlign: "center" }}>{nft.metadata.name}</p>
           {claimableRewards && (
-            <p style={{ textAlign: "center" }}> <b>{truncateRevenue(claimableRewards)}</b><img src="/favicon.ico" alt="$EPOP" style={{ width: "20px", height: "20px", margin: "-4px 5px" }} /><b style={{ fontSize: "12px" }}>24h</b></p>
+            <p style={{ textAlign: "center" }}>
+              <b>{truncateRevenue(claimableRewards)}</b>
+              <img
+                src="/favicon.ico"
+                alt="$EPOP"
+                style={{ width: "20px", height: "20px", margin: "-4px 5px" }}
+              />
+              <b style={{ fontSize: "12px" }}>24h</b>
+            </p>
           )}
           {successMessage && <SuccessMessagePopup message={successMessage} onClose={() => setSuccessMessage('')} />}
-          {errorMessage && <ErrorMessagePopup message={errorMessage} onClose={() => setErrorMessage('')} />} 
+          {errorMessage && <ErrorMessagePopup message={errorMessage} onClose={() => setErrorMessage('')} />}
           <Web3Button
             connectWallet={{
               btnTitle: "Connect Wallet",
@@ -135,17 +142,13 @@ const NFTCard: React.FC<NFTCardProps> = ({ tokenId }) => {
             style={{ border: "2px solid #f70195", height: "50px", width: "100%" }}
             action={(contract) => contract?.call("withdraw", [[nft.metadata.id]])}
             contractAddress={stakingContractAddress}
-            onSuccess={() => {
-              setSuccessMessage('Withdraw Successful');
-            }}
-            onError={() => {
-              setErrorMessage('Error: Transaction rejected or insufficient funds.');
-            }}
+            onSuccess={() => setSuccessMessage('Withdraw Successful')}
+            onError={() => setErrorMessage('Error: Transaction rejected or insufficient funds.')}
           >
             Withdraw
           </Web3Button>
         </div>
-      )}
+      ) : null}
     </>
   );
 };
