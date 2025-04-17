@@ -4,6 +4,7 @@ import AboutComponent from "@components/AboutComponent";
 import Drops from "@components/Drops";
 import ServicesComponent from "@components/ServicesComponent";
 import WhyChooseUsComponent from "@components/WhyChooseUsComponent";
+import TokenDashboard from "@/components/StakeTokenDashboard";
 
 const Index = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -57,14 +58,15 @@ const Index = () => {
         </div>
       </div>
       {/* !Hero Header */}
-      {/* About Section */}
+
       <AboutComponent />
-      {/* !About Section */}
-      {/* Services Section */}
+
       <ServicesComponent />
-      {/* !Services Section */}
+      
+      <TokenDashboard />
+
       <Drops />
-      {/* Investor Section */}
+
       <WhyChooseUsComponent />
     </Layout>
   );
